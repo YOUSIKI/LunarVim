@@ -25,3 +25,5 @@ local commands = require "lvim.core.commands"
 commands.load(commands.defaults)
 
 require("lvim.lsp").setup()
+
+require("neovide").setup()
