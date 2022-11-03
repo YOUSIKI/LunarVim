@@ -10,7 +10,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
-lvim.colorscheme = "rose-pine"
+lvim.colorscheme = "nord"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -180,14 +180,14 @@ linters.setup {
 
 -- Additional Plugins
 lvim.plugins = {
-  -- {
-  --   "shaunsingh/nord.nvim",
-  --   config = function()
-  --     vim.g.nord_contrast = false
-  --     vim.g.nord_borders = true
-  --     require("nord").set()
-  --   end,
-  -- },
+  {
+    "shaunsingh/nord.nvim",
+    config = function()
+      vim.g.nord_contrast = false
+      vim.g.nord_borders = true
+      require("nord").set()
+    end,
+  },
   {
     "rose-pine/neovim",
     as = "rose-pine",
@@ -221,12 +221,6 @@ lvim.plugins = {
   --     vim.g.vimtex_view_general_viewer = "sioyek"
   --     vim.g.vimtex_view_general_options = "@pdf"
   --     vim.g.vimtex_compiler_method = "tectonic"
-  --   end,
-  -- },
-  -- {
-  --   "beauwilliams/focus.nvim",
-  --   config = function()
-  --     require("focus").setup()
   --   end,
   -- },
 }
