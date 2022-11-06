@@ -215,14 +215,14 @@ lvim.plugins = {
       require("better_escape").setup()
     end,
   },
-  -- {
-  --   "lervag/vimtex",
-  --   config = function()
-  --     vim.g.vimtex_view_general_viewer = "sioyek"
-  --     vim.g.vimtex_view_general_options = "@pdf"
-  --     vim.g.vimtex_compiler_method = "tectonic"
-  --   end,
-  -- },
+  {
+    "lervag/vimtex",
+    config = function()
+      vim.g.vimtex_view_general_viewer = "sioyek"
+      vim.g.vimtex_view_general_options = "@pdf"
+      -- vim.g.vimtex_compiler_method = "tectonic"
+    end,
+  },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
