@@ -191,6 +191,12 @@ lvim.plugins = {
   {
     "rose-pine/neovim",
     as = "rose-pine",
+    config = function()
+      require("rose-pine").setup({
+        dark_variant = "moon"
+      })
+      vim.o.background = "dark"
+    end
   },
   {
     "github/copilot.vim",
@@ -238,4 +244,3 @@ lvim.plugins = {
 --     require("nvim-treesitter.highlight").attach(0, "bash")
 --   end,
 -- })
-
