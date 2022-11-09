@@ -10,7 +10,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
-lvim.colorscheme = "nord"
+lvim.colorscheme = "rose-pine"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -182,11 +182,11 @@ linters.setup {
 lvim.plugins = {
   {
     "shaunsingh/nord.nvim",
-    config = function()
-      vim.g.nord_contrast = false
-      vim.g.nord_borders = true
-      require("nord").set()
-    end,
+    -- config = function()
+    --   vim.g.nord_contrast = false
+    --   vim.g.nord_borders = true
+    --   require("nord").set()
+    -- end,
   },
   {
     "rose-pine/neovim",
