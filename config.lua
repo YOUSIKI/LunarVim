@@ -10,7 +10,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
-lvim.colorscheme = "rose-pine"
+lvim.colorscheme = "catppuccin"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -180,22 +180,43 @@ linters.setup {
 
 -- Additional Plugins
 lvim.plugins = {
+  -- {
+  --   "shaunsingh/nord.nvim",
+  --   config = function()
+  --     vim.g.nord_contrast = false
+  --     vim.g.nord_borders = true
+  --     require("nord").set()
+  --   end,
+  -- },
+  -- {
+  --   "rose-pine/neovim",
+  --   as = "rose-pine",
+  --   config = function()
+  --     require("rose-pine").setup({
+  --       dark_variant = "moon"
+  --     })
+  --     vim.o.background = "dark"
+  --   end
+  -- },
   {
-    "shaunsingh/nord.nvim",
-    -- config = function()
-    --   vim.g.nord_contrast = false
-    --   vim.g.nord_borders = true
-    --   require("nord").set()
-    -- end,
-  },
-  {
-    "rose-pine/neovim",
-    as = "rose-pine",
+    "catppuccin/nvim",
+    as = "catppuccin",
     config = function()
-      require("rose-pine").setup({
-        dark_variant = "moon"
+      require("catppuccin").setup({
+        flavour = "mocha", -- latte, frappe, macchiato, mocha
+        integrations = {
+          cmp = true,
+          gitsigns = true,
+          markdown = true,
+          notify = true,
+          nvimtree = true,
+          telescope = true,
+          treesitter = true,
+          ts_rainbow = true,
+          which_key = true,
+          -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+        },
       })
-      vim.o.background = "dark"
     end
   },
   {
@@ -228,6 +249,12 @@ lvim.plugins = {
       vim.g.vimtex_view_general_options = "@pdf"
       -- vim.g.vimtex_compiler_method = "tectonic"
     end,
+  },
+  {
+    "edluffy/hologram.nvim",
+    config = function()
+      require("hologram").setup { auto_display = true }
+    end
   },
 }
 
